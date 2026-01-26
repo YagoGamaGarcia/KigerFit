@@ -1,0 +1,406 @@
+/* CONTAINER PADRÃO */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  background: var(--white);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.header nav a {
+  margin-left: 25px;
+  font-weight: 500;
+}
+
+/* BOTÕES */
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  background: linear-gradient(135deg, var(--dark), var(--dark-light));
+  color: var(--white);
+  text-align: center;
+  padding: 120px 20px;     /* padding, não height */
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 35px;
+}
+
+/* ================= PROBLEMA ================= */
+
+.problem {
+  background: var(--white);
+}
+
+.problem h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.problem ul {
+  list-style: none;
+}
+
+.problem li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+/* ================= SOLUÇÃO / FEATURES ================= */
+
+.solution {
+  background: var(--bg);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.feature {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+}
+
+/* ================= BENEFÍCIOS ================= */
+
+.benefits {
+  background: var(--white);
+  text-align: center;
+}
+
+.benefit-list p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
+
+/* ================= PARA QUEM ================= */
+
+.who {
+  background: var(--bg);
+  text-align: center;
+}
+
+/* ================= PREÇOS ================= */
+
+.pricing {
+  background: var(--white);
+  text-align: center;
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.plan {
+  background: var(--bg);
+  padding: 35px;
+  border-radius: 18px;
+}
+
+.plan strong {
+  display: block;
+  font-size: 1.6rem;
+  margin-top: 15px;
+}
+
+.plan.highlight {
+  border: 3px solid var(--primary);
+  background: #f0fff5;
+}
+
+/* ================= CTA FINAL ================= */
+
+.cta {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* ================= MOBILE FIRST ================= */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header .container {
+    padding: 15px 20px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    display: none;
+    flex-direction: column;
+    border-top: 1px solid #eee;
+  }
+
+  .nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 70px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  /* SEÇÕES */
+  .container {
+    padding: 35px 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* FEATURES */
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  /* BENEFÍCIOS */
+  .benefit-list p {
+    font-size: 1rem;
+  }
+
+  /* PLANOS */
+  .plans {
+    grid-template-columns: 1fr;
+  }
+
+  .plan {
+    padding: 25px;
+  }
+
+  .plan strong {
+    font-size: 1.4rem;
+  }
+
+  .signup {
+  background: #f9fafc;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.signup h2 {
+  margin-bottom: 10px;
+}
+
+.signup p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.signup-form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-form input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.signup small {
+  display: block;
+  margin-top: 15px;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+
+  /* CTA */
+  .cta {
+    padding: 60px 20px;
+  }
+
+  .cta .btn-primary {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  .footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* ESCONDER MENU TOGGLE NO DESKTOP */
+.menu-toggle {
+  display: none;
+}
+
+/* ================= HEADER ================= */
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: var(--dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  /* ESCONDE MENU DESKTOP */
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    display: none;
+    border-top: 1px solid #eee;
+  }
+
+  .nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  /* MOSTRA BOTÃO */
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* ================= ANIMAÇÃO (X) ================= */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}

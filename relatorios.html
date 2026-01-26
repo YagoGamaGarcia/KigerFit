@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatórios | SaaS Fit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/relatorios.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <aside class="sidebar">
+    <div class="brand">SaaS Fit</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="alunos.html">Alunos</a>
+      <a href="avaliacoes.html">Avaliações</a>
+      <a href="treinos.html">Treinos</a>
+      <a class="active" href="relatorios.html">Relatórios</a>
+      <a href="configuracoes.html">Configurações</a>
+      <a class="logout" href="login.html">Sair</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+      <button class="menu-toggle">☰</button>
+      <h1>Relatórios</h1>
+    </header>
+
+    <div class="filters">
+      <select>
+        <option>Selecione o aluno</option>
+      </select>
+
+      <select>
+        <option>Período</option>
+        <option>Último mês</option>
+        <option>Últimos 3 meses</option>
+      </select>
+
+      <button class="btn-primary">Gerar Relatório</button>
+    </div>
+
+    <div class="report-preview">
+      <h2>Prévia do Relatório</h2>
+      <div class="preview-box">
+        📄 Gráficos e dados do aluno aparecerão aqui
+      </div>
+
+      <button class="btn-outline">Exportar PDF</button>
+    </div>
+
+  </main>
+</div>
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/relatorios.js"></script>
+</body>
+</html>

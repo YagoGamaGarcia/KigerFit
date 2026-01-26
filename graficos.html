@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Evolução | SaaS Fit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/graficos.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">SaaS Fit</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="alunos.html">Alunos</a>
+      <a href="avaliacoes.html">Avaliações</a>
+      <a href="treinos.html">Treinos</a>
+      <a class="active" href="graficos.html">Evolução</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a class="logout" href="login.html">Sair</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="topbar">
+      <button class="menu-toggle">☰</button>
+      <h1>Evolução do Aluno</h1>
+    </header>
+
+    <!-- AÇÕES -->
+    <div class="actions">
+      <select id="alunoSelect">
+        <option value="">Selecione o aluno</option>
+      </select>
+    </div>
+
+    <!-- GRÁFICOS -->
+    <div class="charts-grid">
+      <div class="chart-card">
+        <h3>Peso (kg)</h3>
+        <canvas id="pesoChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>% Gordura</h3>
+        <canvas id="gorduraChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>IMC</h3>
+        <canvas id="imcChart"></canvas>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/graficos.js"></script>
+</body>
+</html>

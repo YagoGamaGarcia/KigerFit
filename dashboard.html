@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | SaaS Fit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">SaaS Fit</div>
+    <nav>
+      <a class="active" href="#">Dashboard</a>
+      <a href="alunos.html">Alunos</a>
+      <a href="avaliacoes.html">Avaliações</a>
+      <a href="treinos.html">Treinos</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a href="configuracoes.html">Configurações</a>
+      <a class="logout" href="login.html">Sair</a>
+    </nav>
+  </aside>
+
+  <!-- CONTEÚDO -->
+  <main class="main">
+
+    <!-- HEADER MOBILE -->
+    <header class="topbar">
+      <button class="menu-toggle">☰</button>
+      <h1>Dashboard</h1>
+    </header>
+
+    <!-- KPIs -->
+    <section class="kpis">
+      <div class="card">
+        <h3>Alunos Ativos</h3>
+        <strong>128</strong>
+      </div>
+
+      <div class="card">
+        <h3>Evolução Média</h3>
+        <strong>+12%</strong>
+      </div>
+
+      <div class="card">
+        <h3>Frequência Média</h3>
+        <strong>78%</strong>
+      </div>
+
+      <div class="card">
+        <h3>Alunos em Risco</h3>
+        <strong>9</strong>
+      </div>
+    </section>
+
+    <!-- GRÁFICOS -->
+    <section class="charts">
+      <div class="chart">
+        <h3>Evolução Mensal</h3>
+        <div class="chart-placeholder">[ gráfico ]</div>
+      </div>
+
+      <div class="chart">
+        <h3>Frequência por Mês</h3>
+        <div class="chart-placeholder">[ gráfico ]</div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="/js/dashboard.js"></script>
+</body>
+</html>

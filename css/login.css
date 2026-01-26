@@ -1,0 +1,94 @@
+.login-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* LADO ESQUERDO */
+.login-info {
+  flex: 1;
+  background: linear-gradient(135deg, var(--dark), var(--dark-light));
+  color: var(--white);
+  padding: 80px;
+}
+
+.login-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.login-info p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.login-info ul {
+  list-style: none;
+}
+
+.login-info li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* FORM */
+.login-form {
+  flex: 1;
+  background: var(--white);
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.login-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  width: 100%;
+}
+
+.login-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-links a {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .login-page {
+    flex-direction: column;
+  }
+
+  .login-info {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .login-info h1 {
+    font-size: 2rem;
+  }
+
+  .login-form {
+    padding: 40px 20px;
+  }
+}

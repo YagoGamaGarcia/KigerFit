@@ -1,0 +1,23 @@
+.settings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.setting-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.setting-card h2 {
+  margin-bottom: 15px;
+}
+
+.setting-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}

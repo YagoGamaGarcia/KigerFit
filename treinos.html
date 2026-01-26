@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Treinos | SaaS Fit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/treinos.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">SaaS Fit</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="alunos.html">Alunos</a>
+      <a href="avaliacoes.html">Avaliações</a>
+      <a class="active" href="treinos.html">Treinos</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a href="configuracoes.html">Configurações</a>
+      <a class="logout" href="login.html">Sair</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="topbar">
+      <button class="menu-toggle">☰</button>
+      <h1>Treinos</h1>
+    </header>
+
+    <!-- AÇÕES -->
+    <div class="actions">
+      <select id="alunoSelect">
+        <option value="">Selecione o aluno</option>
+      </select>
+
+      <button class="btn-primary" id="btnNovoTreino">
+        + Novo Treino
+      </button>
+    </div>
+
+    <!-- LISTA DE TREINOS -->
+    <div id="treinosContainer"></div>
+
+  </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content large">
+    <h2>Novo Treino</h2>
+
+    <form id="treinoForm">
+      <label>Tipo do Treino</label>
+      <input type="text" id="tipo" placeholder="Ex: A, B, Pernas" required>
+
+      <h3>Exercícios</h3>
+
+      <div id="exercicios"></div>
+
+      <button type="button" class="btn-outline" id="addExercicio">
+        + Adicionar Exercício
+      </button>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-outline" id="cancelar">Cancelar</button>
+        <button class="btn-primary">Salvar Treino</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/treinos.js"></script>
+</body>
+</html>

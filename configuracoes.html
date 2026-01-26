@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Configurações | SaaS Fit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/configuracoes.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <aside class="sidebar">
+    <div class="brand">SaaS Fit</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="alunos.html">Alunos</a>
+      <a href="avaliacoes.html">Avaliações</a>
+      <a href="treinos.html">Treinos</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a class="active" href="configuracoes.html">Configurações</a>
+      <a class="logout" href="login.html">Sair</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+      <button class="menu-toggle">☰</button>
+      <h1>Configurações</h1>
+    </header>
+
+    <div class="settings">
+
+      <div class="setting-card">
+        <h2>Perfil</h2>
+        <input placeholder="Nome do profissional">
+        <input placeholder="Email">
+      </div>
+
+      <div class="setting-card">
+        <h2>Marca</h2>
+        <input type="file">
+      </div>
+
+      <div class="setting-card">
+        <h2>Plano</h2>
+        <p>Plano atual: <strong>Free</strong></p>
+        <button class="btn-primary">Fazer Upgrade</button>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+<script src="/js/dashboard.js"></script>
+</body>
+</html>

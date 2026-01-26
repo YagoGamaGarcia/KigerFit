@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Alunos | SaaS Fit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/alunos.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">SaaS Fit</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a class="active" href="alunos.html">Alunos</a>
+      <a href="avaliacoes.html">Avaliações</a>
+      <a href="treinos.html">Treinos</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a href="configuracoes.html">Configurações</a>
+      <a class="logout" href="login.html">Sair</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="topbar">
+      <button class="menu-toggle">☰</button>
+      <h1>Alunos</h1>
+    </header>
+
+    <!-- AÇÕES -->
+    <div class="actions">
+      <input type="text" id="search" placeholder="Buscar aluno...">
+      <button class="btn-primary" id="btnAdd">+ Novo Aluno</button>
+    </div>
+
+    <!-- TABELA -->
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Objetivo</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="alunosTable"></tbody>
+      </table>
+    </div>
+
+  </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2 id="modalTitle">Novo Aluno</h2>
+
+    <form id="alunoForm">
+      <input type="hidden" id="alunoId">
+
+      <label>Nome</label>
+      <input type="text" id="nome" required>
+
+      <label>Objetivo</label>
+      <select id="objetivo">
+        <option>Emagrecimento</option>
+        <option>Hipertrofia</option>
+        <option>Saúde</option>
+      </select>
+
+      <label>Status</label>
+      <select id="status">
+        <option>Ativo</option>
+        <option>Inativo</option>
+      </select>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-outline" id="cancelar">Cancelar</button>
+        <button type="submit" class="btn-primary">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/alunos.js"></script>
+</body>
+</html>

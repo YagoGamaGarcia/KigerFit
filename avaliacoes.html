@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Avaliações | SaaS Fit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/avaliacoes.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">SaaS Fit</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="alunos.html">Alunos</a>
+      <a class="active" href="avaliacoes.html">Avaliações</a>
+      <a href="treinos.html">Treinos</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a href="configuracoes.html">Configurações</a>
+      <a class="logout" href="login.html">Sair</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="topbar">
+      <button class="menu-toggle">☰</button>
+      <h1>Avaliações</h1>
+    </header>
+
+    <!-- AÇÕES -->
+    <div class="actions">
+      <select id="alunoSelect">
+        <option value="">Selecione o aluno</option>
+      </select>
+
+      <button class="btn-primary" id="btnAdd">+ Nova Avaliação</button>
+    </div>
+
+    <!-- LISTA -->
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Peso (kg)</th>
+            <th>% Gordura</th>
+            <th>IMC</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="avaliacoesTable"></tbody>
+      </table>
+    </div>
+
+  </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2>Nova Avaliação</h2>
+
+    <form id="avaliacaoForm">
+      <label>Data</label>
+      <input type="date" id="data" required>
+
+      <label>Peso (kg)</label>
+      <input type="number" id="peso" step="0.1" required>
+
+      <label>% Gordura</label>
+      <input type="number" id="gordura" step="0.1">
+
+      <label>Altura (m)</label>
+      <input type="number" id="altura" step="0.01" required>
+
+      <label>Observações</label>
+      <textarea id="obs"></textarea>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-outline" id="cancelar">Cancelar</button>
+        <button class="btn-primary">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/avaliacoes.js"></script>
+</body>
+</html>

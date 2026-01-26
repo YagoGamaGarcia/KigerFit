@@ -1,0 +1,67 @@
+.actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.actions select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 220px;
+}
+
+/* TREINOS */
+.treino {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.treino h3 {
+  margin-bottom: 15px;
+}
+
+.exercicio {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.exercicio span {
+  background: #f2f2f2;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* MODAL */
+.modal-content.large {
+  max-width: 700px;
+}
+
+.exercicio-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.exercicio-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .exercicio,
+  .exercicio-form {
+    grid-template-columns: 1fr;
+  }
+
+}
