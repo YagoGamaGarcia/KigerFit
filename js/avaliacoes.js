@@ -1,4 +1,13 @@
-// MOCK de alunos (depois vem da planilha/API)
+(async () => {
+  const { data: { session } } = await supabase.auth.getSession()
+
+  if (!session) {
+    window.location.href = 'login.html'
+  }
+})()
+
+
+// MOCK de alunos (API)
 const alunos = [
   { id: 1, nome: 'João Silva' },
   { id: 2, nome: 'Maria Santos' }
