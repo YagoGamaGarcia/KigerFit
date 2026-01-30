@@ -1,35 +1,32 @@
 App/
- ├─ SaaS/
- │   ├─ index.html
- │   ├─ login.html
- │   ├─ dashboard.html
- │   ├─ alunos.html
- │   ├─ relatorios.html
- │   ├─ configuracoes.html
- │   ├─ avaliacoes.html
- |   ├─ graficos.html
- |   ├─ treinos.html
- │   ├─ Css/
- │   │   ├─ global.css
- │   │   ├─ public.css
- │   │   ├─ dashboard.css
- |   |   ├─ alunos.css
- │   │   ├─ app.css
- |   |   ├─ avaliacoes.css
- |   |   ├─ graficos.css
- |   |   ├─ login.css
- |   |   ├─ relatorios.css
- |   |   └─ treinos.css
- |   |
- │   └─ JS/
- │       ├─ auth.js          
- │       ├─ alunos.js 
- │       ├─ dashboard.js
- │       ├─ relatorios.js
- │       ├─ configuracoes.js
- │       ├─ graficos.js
- │       ├─ main.js
- │       └─ treinos.js
- │
- └─ supabase-local/
-     └─ docker/
+ ├─ KigerFit/
+    ├─ index.html
+    ├─ login.html
+    ├─ dashboard.html
+    ├─ alunos.html
+    ├─ relatorios.html
+    ├─ configuracoes.html
+    ├─ avaliacoes.html
+    ├─ graficos.html
+    ├─ treinos.html
+    ├─ Css/
+    │   ├─ global.css
+    │   ├─ public.css
+    │   ├─ dashboard.css
+    |   ├─ alunos.css
+    │   ├─ app.css
+    |   ├─ avaliacoes.css
+    |   ├─ graficos.css
+    |   ├─ login.css
+    |   ├─ relatorios.css
+    |   └─ treinos.css
+    |
+    └─ JS/
+    │   ├─ auth.js          
+    │    ├─ alunos.js 
+    │    ├─ dashboard.js
+    │   ├─ relatorios.js
+    │    ├─ configuracoes.js
+    │    ├─ graficos.js
+    │    ├─ main.js
+    │    └─ treinos.js
