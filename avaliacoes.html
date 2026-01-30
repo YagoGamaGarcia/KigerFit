@@ -65,32 +65,149 @@
 
 <!-- MODAL -->
 <div class="modal" id="modal">
-  <div class="modal-content">
-    <h2>Nova Avaliação</h2>
+  <div class="modal-content modal-large">
+    <h2>Nova Avaliação Física</h2>
 
     <form id="avaliacaoForm">
-      <label>Data</label>
-      <input type="date" id="data" required>
 
-      <label>Peso (kg)</label>
-      <input type="number" id="peso" step="0.1" required>
+      <!-- IDENTIFICAÇÃO -->
+      <fieldset>
+        <legend>📅 Identificação</legend>
 
-      <label>% Gordura</label>
-      <input type="number" id="gordura" step="0.1">
+        <label>Data da Avaliação</label>
+        <input type="date" id="data_avaliacao" required>
+      </fieldset>
 
-      <label>Altura (m)</label>
-      <input type="number" id="altura" step="0.01" required>
+      <!-- MEDIDAS BÁSICAS -->
+      <fieldset>
+        <legend>📏 Medidas Corporais</legend>
 
-      <label>Observações</label>
-      <textarea id="obs"></textarea>
+        <label>Peso (kg)</label>
+        <input type="number" id="peso" step="0.1" required>
 
+        <label>Altura (m)</label>
+        <input type="number" id="altura" step="0.01" required>
+
+        <label>IMC</label>
+        <input type="number" id="imc" step="0.1" disabled>
+      </fieldset>
+
+      <!-- CIRCUNFERÊNCIAS -->
+      <fieldset>
+        <legend>📐 Circunferências (cm)</legend>
+
+        <input type="number" id="cintura" placeholder="Cintura">
+        <input type="number" id="abdomen" placeholder="Abdômen">
+        <input type="number" id="quadril" placeholder="Quadril">
+        <input type="number" id="peitoral" placeholder="Peitoral">
+        <input type="number" id="braco_relaxado" placeholder="Braço relaxado">
+        <input type="number" id="braco_contraido" placeholder="Braço contraído">
+        <input type="number" id="coxa" placeholder="Coxa">
+        <input type="number" id="panturrilha" placeholder="Panturrilha">
+      </fieldset>
+
+      <!-- COMPOSIÇÃO CORPORAL -->
+      <fieldset>
+        <legend>🧬 Composição Corporal</legend>
+
+        <label>% Gordura</label>
+        <input type="number" id="percentual_gordura" step="0.1">
+
+        <label>Massa Magra (kg)</label>
+        <input type="number" id="massa_magra" step="0.1">
+
+        <label>Massa Gorda (kg)</label>
+        <input type="number" id="massa_gorda" step="0.1">
+
+        <label>TMB</label>
+        <input type="number" id="tmb">
+
+        <label>Método de Avaliação</label>
+        <select id="metodo_avaliacao">
+          <option value="">Selecione</option>
+          <option value="bioimpedancia">Bioimpedância</option>
+          <option value="dobras_cutaneas">Dobras Cutâneas</option>
+          <option value="dexa">DEXA</option>
+        </select>
+      </fieldset>
+
+      <!-- OBJETIVO -->
+      <fieldset>
+        <legend>🎯 Objetivo Principal</legend>
+
+        <label>Objetivo</label>
+        <select id="objetivo_principal">
+          <option value="">Selecione</option>
+          <option value="emagrecimento">Emagrecimento</option>
+          <option value="hipertrofia">Hipertrofia</option>
+          <option value="condicionamento">Condicionamento</option>
+          <option value="performance">Performance</option>
+          <option value="reabilitacao">Reabilitação</option>
+        </select>
+
+        <label>Prioridade</label>
+        <select id="prioridade">
+          <option value="estetica">Estética</option>
+          <option value="saude">Saúde</option>
+          <option value="forca">Força</option>
+        </select>
+
+        <label>Prazo</label>
+        <select id="prazo">
+          <option value="curto">Curto</option>
+          <option value="medio">Médio</option>
+          <option value="longo">Longo</option>
+        </select>
+      </fieldset>
+
+      <!-- HISTÓRICO -->
+      <fieldset>
+        <legend>🧠 Histórico e Estilo de Vida</legend>
+
+        <label>Nível de Experiência</label>
+        <select id="nivel_experiencia">
+          <option value="iniciante">Iniciante</option>
+          <option value="intermediario">Intermediário</option>
+          <option value="avancado">Avançado</option>
+        </select>
+
+        <label>Frequência semanal (dias)</label>
+        <input type="number" id="frequencia_semanal">
+
+        <label>Tempo parado (meses)</label>
+        <input type="number" id="tempo_parado_meses">
+
+        <label>Lesões / Restrições</label>
+        <textarea id="lesoes"></textarea>
+      </fieldset>
+
+      <!-- TESTES -->
+      <fieldset>
+        <legend>🧪 Testes Físicos</legend>
+
+        <textarea id="forca_estimado" placeholder="Força"></textarea>
+        <textarea id="resistencia" placeholder="Resistência"></textarea>
+        <textarea id="mobilidade" placeholder="Mobilidade"></textarea>
+        <textarea id="flexibilidade" placeholder="Flexibilidade"></textarea>
+        <textarea id="capacidade_cardiorrespiratoria" placeholder="Capacidade cardiorrespiratória"></textarea>
+      </fieldset>
+
+      <!-- OBSERVAÇÕES -->
+      <fieldset>
+        <legend>📝 Observações</legend>
+        <textarea id="observacoes"></textarea>
+      </fieldset>
+
+      <!-- AÇÕES -->
       <div class="modal-actions">
         <button type="button" class="btn-outline" id="cancelar">Cancelar</button>
-        <button class="btn-primary">Salvar</button>
+        <button class="btn-primary">Salvar Avaliação</button>
       </div>
+
     </form>
   </div>
 </div>
+
 
 <script src="/js/dashboard.js"></script>
 <script src="/js/avaliacoes.js"></script>
